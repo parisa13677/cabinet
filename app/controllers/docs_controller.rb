@@ -19,6 +19,7 @@ class DocsController < ApplicationController
 
   def create
     @doc = current_user.docs.build(doc_params)
+
     if @doc.save
       redirect_to @doc
     else

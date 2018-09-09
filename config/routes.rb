@@ -1,7 +1,13 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
   devise_for :models
   get 'welcome/index'
+
+  authenticated :user do
+    root 'docs#index', as: 'authenticated_root'
+  end
 
   root 'welcome#index'
 
