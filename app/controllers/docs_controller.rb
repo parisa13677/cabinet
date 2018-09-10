@@ -3,7 +3,6 @@
 # this is a DocsController
 class DocsController < ApplicationController
   before_action :find_doc, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new,:create]
 
   def index
       @docs = Doc.where(user_id: current_user)
