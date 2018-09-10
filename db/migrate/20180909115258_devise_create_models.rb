@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# this is a DeviseCreateModels
 class DeviseCreateModels < ActiveRecord::Migration[5.2]
   def change
     create_table :models do |t|
